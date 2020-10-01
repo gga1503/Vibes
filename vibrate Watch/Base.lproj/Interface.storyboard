@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="vibrate_Watch" customModuleProvider="target">
+                    <items>
+                        <spriteKitScene width="120" height="120" alignment="center" verticalAlignment="center" id="hWJ-vO-fUz">
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="W4J-bf-a7g">
+                                    <connections>
+                                        <action selector="tapped:" destination="AgC-eL-Hgc" id="MkX-ye-pIY"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
+                        </spriteKitScene>
+                        <group width="120" height="40" alignment="center" verticalAlignment="bottom" id="hra-KT-EG7">
+                            <items>
+                                <button width="25" height="25" alignment="left" verticalAlignment="center" backgroundImage="TfaBackward" id="75V-e4-NZf">
+                                    <connections>
+                                        <action selector="prevsong" destination="AgC-eL-Hgc" id="EVO-XN-L1J"/>
+                                    </connections>
+                                </button>
+                                <button width="40" height="40" alignment="center" backgroundImage="TplayButton" id="Zp5-hZ-WXL">
+                                    <connections>
+                                        <action selector="play" destination="AgC-eL-Hgc" id="TuL-ND-jk2"/>
+                                    </connections>
+                                </button>
+                                <button width="25" height="25" alignment="right" verticalAlignment="center" backgroundImage="TfaBForward" id="dzV-7i-Ywr">
+                                    <connections>
+                                        <action selector="nextsong" destination="AgC-eL-Hgc" id="nCZ-CM-y6u"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="playbutton" destination="Zp5-hZ-WXL" id="zNF-Xd-zDN"/>
+                        <outlet property="scene" destination="hWJ-vO-fUz" id="zEN-M0-jjr"/>
+                        <outlet property="tap" destination="W4J-bf-a7g" id="aB7-pC-4BR"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="vibrate_Watch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="528" y="599"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="vibrate_Watch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
+        </scene>
+    </scenes>
+</document>

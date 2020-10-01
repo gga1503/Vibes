@@ -1,0 +1,193 @@
+//
+//  ViewController.swift
+//  vibrate
+//
+//  Created by christopher putra setiawan on 17/01/19.
+//  Copyright © 2019 christopher putra setiawan. All rights reserved.
+//
+
+import UIKit
+import MediaPlayer
+import AVFoundation
+import aubio
+import AudioToolbox
+import WatchConnectivity
+
+<<<<<<< HEAD
+class ViewController: UIViewController, WCSessionDelegate {
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    var session:WCSession = WCSession.default
+    
+    
+=======
+
+class ViewController: UIViewController {
+>>>>>>> d9cb6e7ab1f5312bd0ef08a4c36215429263343c
+    var albums: [AlbumInfo] = []
+    var songsbundle: [String] = []
+    var songQuery: SongQuery = SongQuery()
+    var audio: AVAudioPlayer?
+    var player = AVAudioPlayer()
+    var timer = Timer()
+    var index = 0
+    var last:Double = 0
+    var beats:[Double] = []
+    var generator = UIImpactFeedbackGenerator(style: .heavy)
+    @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var buttonname: UIButton!
+    @objc func fires(){
+        if player.isPlaying && index < beats.count{
+            if Double(round(10*beats[index])/10) == Double(round(player.currentTime*10)/10 + 0.1) {
+                print(beats[index])
+                player.updateMeters()
+                var power:Float = 0
+                var peak:Float = 0
+                for i in 0...player.numberOfChannels {
+                    if player.averagePower(forChannel: i) != -160 {
+                        power = player.averagePower(forChannel: i)
+                        peak = player.peakPower(forChannel: i)
+                         
+                    }
+                }
+                var msg = 0
+                print(power, peak)
+                if index < beats.count-1 {
+                    if power > -10 && Double(round(10*beats[index+1])/10) - Double(round(10*beats[index])/10) > 0.6{
+                        msg = 1
+                    }
+                    else if Double(round(10*beats[index+1])/10) - Double(round(10*beats[index])/10) < 0.3{
+                        msg = 2
+                        index = index + 1
+                    }
+                }
+                generator.impactOccurred()
+                sendWatchMessage(type: msg)
+                index = index+1
+            }
+            else if Double(round(10*beats[index])/10) < Double(round(player.currentTime*10)/10 + 0.1){
+                while Double(round(10*beats[index])/10) < Double(round(player.currentTime*10)/10 + 0.1) && index < beats.count - 1 {
+                    index = index+1
+                }
+            }
+        }
+        else {
+            timer.invalidate()
+        }
+    }
+    func sendWatchMessage(type: Int) {
+           var message = ["Message" : "0"]
+        if type == 1 {
+            message = ["Message" : "1"]
+        }
+        session.sendMessage(message as [String : Any], replyHandler: nil, errorHandler: { (err) in
+            print(err.localizedDescription)
+        })
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+            session.delegate = self
+            session.activate()
+        table.delegate = self
+        table.dataSource = self
+        MPMediaLibrary.requestAuthorization { (status) in
+            if status == .authorized {
+                self.albums = self.songQuery.get(songCategory: "")
+                DispatchQueue.main.async {
+                    self.table.reloadData()
+                }
+            }
+            
+        }
+        let fm = FileManager.default
+        let path = Bundle.main.resourcePath!
+        
+        do {
+            let items = try fm.contentsOfDirectory(atPath: path)
+            
+            for item in items {
+                    if item.hasSuffix("mp3") {
+                        print(item)
+                        songsbundle.append(item)
+                    }
+            }
+        } catch {
+            // failed to read directory – bad permissions, perhaps?
+        }
+        
+    }
+    
+}
+    extension ViewController: UITableViewDelegate {
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            do {
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+                let urls = NSURL(fileURLWithPath: Bundle.main.path(forResource: songsbundle[indexPath.row], ofType: "") ?? "")
+                audio = try AVAudioPlayer(contentsOf: urls as URL)
+                player = (audio)!
+                player.isMeteringEnabled = true
+                player.updateMeters()
+                let power = player.averagePower(forChannel: 0)
+                print(power)
+                let path = Bundle.main.path(forResource: songsbundle[indexPath.row], ofType: "")
+                if (path != nil) {
+                    beats = [Double]()
+                    let hop_size : uint_t = 256
+                    let a = new_fvec(hop_size)
+                    let b = new_aubio_source(path, 0, hop_size)
+                    let samplerate = aubio_source_get_samplerate(b)
+                    var read: uint_t = 0
+                    let beat = new_fvec(1)
+                    var total_frames : uint_t = 0
+                    let tempo: OpaquePointer? = new_aubio_tempo("default",512,hop_size,samplerate)
+                    aubio_tempo_set_silence (tempo, -30)
+                    while (true) {
+                        aubio_source_do(b, a, &read)
+                        aubio_tempo_do(tempo, a, beat)
+                        if (fvec_get_sample(beat, 0) != 0) {
+                            let beat_time : Double = Double(total_frames) / Double(samplerate)
+                            beats.append(beat_time)
+                        }
+                        total_frames += read
+                        if (read < hop_size) { break }
+                    }
+                    print("read", total_frames, "frames at", aubio_source_get_samplerate(b), "Hz")
+                    del_aubio_source(b)
+                    del_fvec(a)
+                }
+                index = 0
+                player.prepareToPlay()
+                player.play()
+                timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(fires), userInfo: nil, repeats: true)
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+    }
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return songsbundle.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = table.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
+        cell.songtitle.text = songsbundle[indexPath.row]
+        return cell
+    }
+    
+        
+    }

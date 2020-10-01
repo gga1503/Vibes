@@ -1,0 +1,763 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3946BCEE21F8573C0075FC74 /* aubio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3946BCED21F8573C0075FC74 /* aubio.framework */; };
+		3946BCF121FEB4F10075FC74 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3946BCF021FEB4F10075FC74 /* AudioToolbox.framework */; };
+		3946BCF321FEB4F90075FC74 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3946BCF221FEB4F90075FC74 /* Accelerate.framework */; };
+		39C13C1C2202CB83002F75AF /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C13C1B2202CB83002F75AF /* welcomeViewController.swift */; };
+		39D9530621F03A3300B37F07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D9530521F03A3300B37F07 /* AppDelegate.swift */; };
+		39D9530821F03A3300B37F07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D9530721F03A3300B37F07 /* ViewController.swift */; };
+		39D9530B21F03A3300B37F07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39D9530921F03A3300B37F07 /* Main.storyboard */; };
+		39D9530D21F03A3400B37F07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39D9530C21F03A3400B37F07 /* Assets.xcassets */; };
+		39D953D221F5AF4B00B37F07 /* AlbumInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D953D121F5AF4B00B37F07 /* AlbumInfo.swift */; };
+		A70394E8230FA75C004C7C23 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70394E6230FA75C004C7C23 /* Interface.storyboard */; };
+		A70394EA230FA75E004C7C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70394E9230FA75E004C7C23 /* Assets.xcassets */; };
+		A70394F1230FA75E004C7C23 /* vibrate Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A70394F0230FA75E004C7C23 /* vibrate Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A70394F6230FA75E004C7C23 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70394F5230FA75E004C7C23 /* InterfaceController.swift */; };
+		A70394F8230FA75E004C7C23 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70394F7230FA75E004C7C23 /* ExtensionDelegate.swift */; };
+		A70394FA230FA75E004C7C23 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70394F9230FA75E004C7C23 /* NotificationController.swift */; };
+		A70394FC230FA75E004C7C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70394FB230FA75E004C7C23 /* Assets.xcassets */; };
+		A7039501230FA75E004C7C23 /* vibrate Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A70394E4230FA75C004C7C23 /* vibrate Watch.app */; };
+		A703950B231131F3004C7C23 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A703950A231131F2004C7C23 /* HealthKit.framework */; };
+		A703950D231412C9004C7C23 /* spectrum.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A703950C231412C9004C7C23 /* spectrum.atlas */; };
+		A73BBE42228E5C5C008BA91E /* gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73BBE41228E5C5C008BA91E /* gif.swift */; };
+		A73BBE82228E604E008BA91E /* muter.gif in Resources */ = {isa = PBXBuildFile; fileRef = A73BBE81228E604E008BA91E /* muter.gif */; };
+		A74FDB7C230298C300272C14 /* mpmediaitemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FDB7B230298C300272C14 /* mpmediaitemViewController.swift */; };
+		A74FDB7E2303A8FA00272C14 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FDB7D2303A8FA00272C14 /* Song.swift */; };
+		A74FDB832309859F00272C14 /* SmokeParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = A74FDB822309859F00272C14 /* SmokeParticle.sks */; };
+		A74FDB85230985FD00272C14 /* FireParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = A74FDB84230985FD00272C14 /* FireParticle.sks */; };
+		A74FDB872309863B00272C14 /* SparkParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = A74FDB862309863B00272C14 /* SparkParticle.sks */; };
+		A74FDB89230A9FBE00272C14 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = A74FDB88230A9FBE00272C14 /* MyParticle.sks */; };
+		A7B1CE29231619F000046567 /* spectrum3.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A7B1CE28231619F000046567 /* spectrum3.atlas */; };
+		A7B1CE2B23161C9F00046567 /* spectrum4.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A7B1CE2A23161C9F00046567 /* spectrum4.atlas */; };
+		A7B1CE2D23161F0F00046567 /* spectrum5.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A7B1CE2C23161F0F00046567 /* spectrum5.atlas */; };
+		A7B1CE2F2316224C00046567 /* spectrum6.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A7B1CE2E2316224C00046567 /* spectrum6.atlas */; };
+		A7B1CE312316249600046567 /* spectrum7.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A7B1CE302316249500046567 /* spectrum7.atlas */; };
+		A7CE565F224327FD007255BF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3946BC8C21F80A2F0075FC74 /* TableViewCell.swift */; };
+		A7CE5671224D0984007255BF /* spotifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CE5670224D0984007255BF /* spotifyViewController.swift */; };
+		BF0592322202950F00EBC789 /* playViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0592312202950F00EBC789 /* playViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A70394F2230FA75E004C7C23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39D952FA21F03A3300B37F07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A70394EF230FA75E004C7C23;
+			remoteInfo = "vibrate Watch Extension";
+		};
+		A70394FF230FA75E004C7C23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39D952FA21F03A3300B37F07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A70394E3230FA75C004C7C23;
+			remoteInfo = "vibrate Watch";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		39D9533B21F03A3500B37F07 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				A7039501230FA75E004C7C23 /* vibrate Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7039505230FA75E004C7C23 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A70394F1230FA75E004C7C23 /* vibrate Watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3946BC8C21F80A2F0075FC74 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		3946BCED21F8573C0075FC74 /* aubio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = aubio.framework; sourceTree = "<group>"; };
+		3946BCF021FEB4F10075FC74 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3946BCF221FEB4F90075FC74 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		39C13C1B2202CB83002F75AF /* welcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
+		39D9530221F03A3300B37F07 /* vibrate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vibrate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		39D9530521F03A3300B37F07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		39D9530721F03A3300B37F07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		39D9530A21F03A3300B37F07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		39D9530C21F03A3400B37F07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		39D9531121F03A3400B37F07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39D953D121F5AF4B00B37F07 /* AlbumInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumInfo.swift; sourceTree = "<group>"; };
+		A70394E4230FA75C004C7C23 /* vibrate Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vibrate Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A70394E7230FA75C004C7C23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		A70394E9230FA75E004C7C23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A70394EB230FA75E004C7C23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A70394F0230FA75E004C7C23 /* vibrate Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "vibrate Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A70394F5230FA75E004C7C23 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		A70394F7230FA75E004C7C23 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		A70394F9230FA75E004C7C23 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		A70394FB230FA75E004C7C23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A70394FD230FA75E004C7C23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A70394FE230FA75E004C7C23 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		A7039509231131F2004C7C23 /* vibrate Watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "vibrate Watch Extension.entitlements"; sourceTree = "<group>"; };
+		A703950A231131F2004C7C23 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		A703950C231412C9004C7C23 /* spectrum.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = spectrum.atlas; sourceTree = "<group>"; };
+		A73BBE41228E5C5C008BA91E /* gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gif.swift; sourceTree = "<group>"; };
+		A73BBE81228E604E008BA91E /* muter.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = muter.gif; sourceTree = "<group>"; };
+		A74FDB7B230298C300272C14 /* mpmediaitemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mpmediaitemViewController.swift; sourceTree = "<group>"; };
+		A74FDB7D2303A8FA00272C14 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		A74FDB822309859F00272C14 /* SmokeParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SmokeParticle.sks; sourceTree = "<group>"; };
+		A74FDB84230985FD00272C14 /* FireParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireParticle.sks; sourceTree = "<group>"; };
+		A74FDB862309863B00272C14 /* SparkParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SparkParticle.sks; sourceTree = "<group>"; };
+		A74FDB88230A9FBE00272C14 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
+		A74FDB8F230BB88F00272C14 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		A74FDB90230BB8A400272C14 /* MediaToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MediaToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		A74FDB91230BB8AC00272C14 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		A7B1CE28231619F000046567 /* spectrum3.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = spectrum3.atlas; sourceTree = "<group>"; };
+		A7B1CE2A23161C9F00046567 /* spectrum4.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = spectrum4.atlas; sourceTree = "<group>"; };
+		A7B1CE2C23161F0F00046567 /* spectrum5.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = spectrum5.atlas; sourceTree = "<group>"; };
+		A7B1CE2E2316224C00046567 /* spectrum6.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = spectrum6.atlas; sourceTree = "<group>"; };
+		A7B1CE302316249500046567 /* spectrum7.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = spectrum7.atlas; sourceTree = "<group>"; };
+		A7CE566822449465007255BF /* vibrate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vibrate-Bridging-Header.h"; sourceTree = "<group>"; };
+		A7CE5670224D0984007255BF /* spotifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spotifyViewController.swift; sourceTree = "<group>"; };
+		BF0592312202950F00EBC789 /* playViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		39D952FF21F03A3300B37F07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3946BCF321FEB4F90075FC74 /* Accelerate.framework in Frameworks */,
+				3946BCF121FEB4F10075FC74 /* AudioToolbox.framework in Frameworks */,
+				3946BCEE21F8573C0075FC74 /* aubio.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A70394ED230FA75E004C7C23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A703950B231131F3004C7C23 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3946BCEF21FEB4F10075FC74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A703950A231131F2004C7C23 /* HealthKit.framework */,
+				A74FDB91230BB8AC00272C14 /* AVFoundation.framework */,
+				A74FDB90230BB8A400272C14 /* MediaToolbox.framework */,
+				A74FDB8F230BB88F00272C14 /* CoreMedia.framework */,
+				3946BCF221FEB4F90075FC74 /* Accelerate.framework */,
+				3946BCF021FEB4F10075FC74 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		39D952F921F03A3300B37F07 = {
+			isa = PBXGroup;
+			children = (
+				A73BBE41228E5C5C008BA91E /* gif.swift */,
+				39D9530421F03A3300B37F07 /* vibrate */,
+				A70394E5230FA75C004C7C23 /* vibrate Watch */,
+				A70394F4230FA75E004C7C23 /* vibrate Watch Extension */,
+				39D9530321F03A3300B37F07 /* Products */,
+				3946BCEF21FEB4F10075FC74 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		39D9530321F03A3300B37F07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39D9530221F03A3300B37F07 /* vibrate.app */,
+				A70394E4230FA75C004C7C23 /* vibrate Watch.app */,
+				A70394F0230FA75E004C7C23 /* vibrate Watch Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		39D9530421F03A3300B37F07 /* vibrate */ = {
+			isa = PBXGroup;
+			children = (
+				A74FDB812307F49200272C14 /* Fonts */,
+				3946BCED21F8573C0075FC74 /* aubio.framework */,
+				39D9530721F03A3300B37F07 /* ViewController.swift */,
+				39D9530521F03A3300B37F07 /* AppDelegate.swift */,
+				39D9530921F03A3300B37F07 /* Main.storyboard */,
+				A74FDB88230A9FBE00272C14 /* MyParticle.sks */,
+				A74FDB822309859F00272C14 /* SmokeParticle.sks */,
+				A74FDB84230985FD00272C14 /* FireParticle.sks */,
+				A74FDB862309863B00272C14 /* SparkParticle.sks */,
+				A74FDB7B230298C300272C14 /* mpmediaitemViewController.swift */,
+				A7CE5670224D0984007255BF /* spotifyViewController.swift */,
+				39C13C1B2202CB83002F75AF /* welcomeViewController.swift */,
+				BF0592312202950F00EBC789 /* playViewController.swift */,
+				A74FDB7D2303A8FA00272C14 /* Song.swift */,
+				3946BC8C21F80A2F0075FC74 /* TableViewCell.swift */,
+				39D953D121F5AF4B00B37F07 /* AlbumInfo.swift */,
+				A73BBE81228E604E008BA91E /* muter.gif */,
+				39D9530C21F03A3400B37F07 /* Assets.xcassets */,
+				39D9531121F03A3400B37F07 /* Info.plist */,
+				A7CE566822449465007255BF /* vibrate-Bridging-Header.h */,
+			);
+			path = vibrate;
+			sourceTree = "<group>";
+		};
+		A70394E5230FA75C004C7C23 /* vibrate Watch */ = {
+			isa = PBXGroup;
+			children = (
+				A70394E6230FA75C004C7C23 /* Interface.storyboard */,
+				A70394E9230FA75E004C7C23 /* Assets.xcassets */,
+				A70394EB230FA75E004C7C23 /* Info.plist */,
+			);
+			path = "vibrate Watch";
+			sourceTree = "<group>";
+		};
+		A70394F4230FA75E004C7C23 /* vibrate Watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A7B1CE302316249500046567 /* spectrum7.atlas */,
+				A7B1CE2E2316224C00046567 /* spectrum6.atlas */,
+				A7B1CE2C23161F0F00046567 /* spectrum5.atlas */,
+				A7B1CE2A23161C9F00046567 /* spectrum4.atlas */,
+				A7B1CE28231619F000046567 /* spectrum3.atlas */,
+				A703950C231412C9004C7C23 /* spectrum.atlas */,
+				A7039509231131F2004C7C23 /* vibrate Watch Extension.entitlements */,
+				A70394F5230FA75E004C7C23 /* InterfaceController.swift */,
+				A70394F7230FA75E004C7C23 /* ExtensionDelegate.swift */,
+				A70394F9230FA75E004C7C23 /* NotificationController.swift */,
+				A70394FB230FA75E004C7C23 /* Assets.xcassets */,
+				A70394FD230FA75E004C7C23 /* Info.plist */,
+				A70394FE230FA75E004C7C23 /* PushNotificationPayload.apns */,
+			);
+			path = "vibrate Watch Extension";
+			sourceTree = "<group>";
+		};
+		A74FDB812307F49200272C14 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		39D9530121F03A3300B37F07 /* vibrate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39D9533C21F03A3500B37F07 /* Build configuration list for PBXNativeTarget "vibrate" */;
+			buildPhases = (
+				39D952FE21F03A3300B37F07 /* Sources */,
+				39D952FF21F03A3300B37F07 /* Frameworks */,
+				39D9530021F03A3300B37F07 /* Resources */,
+				39D9533B21F03A3500B37F07 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7039500230FA75E004C7C23 /* PBXTargetDependency */,
+			);
+			name = vibrate;
+			productName = vibrate;
+			productReference = 39D9530221F03A3300B37F07 /* vibrate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A70394E3230FA75C004C7C23 /* vibrate Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7039506230FA75E004C7C23 /* Build configuration list for PBXNativeTarget "vibrate Watch" */;
+			buildPhases = (
+				A70394E2230FA75C004C7C23 /* Resources */,
+				A7039505230FA75E004C7C23 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A70394F3230FA75E004C7C23 /* PBXTargetDependency */,
+			);
+			name = "vibrate Watch";
+			productName = "vibrate Watch";
+			productReference = A70394E4230FA75C004C7C23 /* vibrate Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		A70394EF230FA75E004C7C23 /* vibrate Watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7039502230FA75E004C7C23 /* Build configuration list for PBXNativeTarget "vibrate Watch Extension" */;
+			buildPhases = (
+				A70394EC230FA75E004C7C23 /* Sources */,
+				A70394ED230FA75E004C7C23 /* Frameworks */,
+				A70394EE230FA75E004C7C23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "vibrate Watch Extension";
+			productName = "vibrate Watch Extension";
+			productReference = A70394F0230FA75E004C7C23 /* vibrate Watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		39D952FA21F03A3300B37F07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "christopher putra setiawan";
+				TargetAttributes = {
+					39D9530121F03A3300B37F07 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					A70394E3230FA75C004C7C23 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					A70394EF230FA75E004C7C23 = {
+						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes.watchos.extension = {
+								enabled = 1;
+							};
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 39D952FD21F03A3300B37F07 /* Build configuration list for PBXProject "vibrate" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 39D952F921F03A3300B37F07;
+			productRefGroup = 39D9530321F03A3300B37F07 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				39D9530121F03A3300B37F07 /* vibrate */,
+				A70394E3230FA75C004C7C23 /* vibrate Watch */,
+				A70394EF230FA75E004C7C23 /* vibrate Watch Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		39D9530021F03A3300B37F07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A74FDB832309859F00272C14 /* SmokeParticle.sks in Resources */,
+				A74FDB85230985FD00272C14 /* FireParticle.sks in Resources */,
+				A73BBE82228E604E008BA91E /* muter.gif in Resources */,
+				39D9530D21F03A3400B37F07 /* Assets.xcassets in Resources */,
+				39D9530B21F03A3300B37F07 /* Main.storyboard in Resources */,
+				A74FDB872309863B00272C14 /* SparkParticle.sks in Resources */,
+				A74FDB89230A9FBE00272C14 /* MyParticle.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A70394E2230FA75C004C7C23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A70394EA230FA75E004C7C23 /* Assets.xcassets in Resources */,
+				A70394E8230FA75C004C7C23 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A70394EE230FA75E004C7C23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7B1CE2B23161C9F00046567 /* spectrum4.atlas in Resources */,
+				A70394FC230FA75E004C7C23 /* Assets.xcassets in Resources */,
+				A703950D231412C9004C7C23 /* spectrum.atlas in Resources */,
+				A7B1CE312316249600046567 /* spectrum7.atlas in Resources */,
+				A7B1CE2D23161F0F00046567 /* spectrum5.atlas in Resources */,
+				A7B1CE2F2316224C00046567 /* spectrum6.atlas in Resources */,
+				A7B1CE29231619F000046567 /* spectrum3.atlas in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		39D952FE21F03A3300B37F07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39D953D221F5AF4B00B37F07 /* AlbumInfo.swift in Sources */,
+				39D9530821F03A3300B37F07 /* ViewController.swift in Sources */,
+				A7CE5671224D0984007255BF /* spotifyViewController.swift in Sources */,
+				39C13C1C2202CB83002F75AF /* welcomeViewController.swift in Sources */,
+				A74FDB7E2303A8FA00272C14 /* Song.swift in Sources */,
+				A7CE565F224327FD007255BF /* TableViewCell.swift in Sources */,
+				A73BBE42228E5C5C008BA91E /* gif.swift in Sources */,
+				39D9530621F03A3300B37F07 /* AppDelegate.swift in Sources */,
+				BF0592322202950F00EBC789 /* playViewController.swift in Sources */,
+				A74FDB7C230298C300272C14 /* mpmediaitemViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A70394EC230FA75E004C7C23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A70394FA230FA75E004C7C23 /* NotificationController.swift in Sources */,
+				A70394F8230FA75E004C7C23 /* ExtensionDelegate.swift in Sources */,
+				A70394F6230FA75E004C7C23 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A70394F3230FA75E004C7C23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A70394EF230FA75E004C7C23 /* vibrate Watch Extension */;
+			targetProxy = A70394F2230FA75E004C7C23 /* PBXContainerItemProxy */;
+		};
+		A7039500230FA75E004C7C23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A70394E3230FA75C004C7C23 /* vibrate Watch */;
+			targetProxy = A70394FF230FA75E004C7C23 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		39D9530921F03A3300B37F07 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39D9530A21F03A3300B37F07 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A70394E6230FA75C004C7C23 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A70394E7230FA75C004C7C23 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		39D9533221F03A3500B37F07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		39D9533321F03A3500B37F07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		39D9533D21F03A3500B37F07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56WS5QX78F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vibrate",
+				);
+				INFOPLIST_FILE = vibrate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.vibrate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "vibrate/vibrate-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		39D9533E21F03A3500B37F07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56WS5QX78F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vibrate",
+				);
+				INFOPLIST_FILE = vibrate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.vibrate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "vibrate/vibrate-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A7039503230FA75E004C7C23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "vibrate Watch Extension/vibrate Watch Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56WS5QX78F;
+				INFOPLIST_FILE = "vibrate Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.vibrate.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Debug;
+		};
+		A7039504230FA75E004C7C23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "vibrate Watch Extension/vibrate Watch Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56WS5QX78F;
+				INFOPLIST_FILE = "vibrate Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.vibrate.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Release;
+		};
+		A7039507230FA75E004C7C23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56WS5QX78F;
+				IBSC_MODULE = vibrate_Watch_Extension;
+				INFOPLIST_FILE = "vibrate Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = test.vibrate.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Debug;
+		};
+		A7039508230FA75E004C7C23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56WS5QX78F;
+				IBSC_MODULE = vibrate_Watch_Extension;
+				INFOPLIST_FILE = "vibrate Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = test.vibrate.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		39D952FD21F03A3300B37F07 /* Build configuration list for PBXProject "vibrate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39D9533221F03A3500B37F07 /* Debug */,
+				39D9533321F03A3500B37F07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39D9533C21F03A3500B37F07 /* Build configuration list for PBXNativeTarget "vibrate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39D9533D21F03A3500B37F07 /* Debug */,
+				39D9533E21F03A3500B37F07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7039502230FA75E004C7C23 /* Build configuration list for PBXNativeTarget "vibrate Watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7039503230FA75E004C7C23 /* Debug */,
+				A7039504230FA75E004C7C23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7039506230FA75E004C7C23 /* Build configuration list for PBXNativeTarget "vibrate Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7039507230FA75E004C7C23 /* Debug */,
+				A7039508230FA75E004C7C23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 39D952FA21F03A3300B37F07 /* Project object */;
+}
